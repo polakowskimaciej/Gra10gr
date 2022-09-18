@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ScoreCounterTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-09-18T11:41:13" hostname="DESKTOP-02V1648" time="0.035">
+  <properties/>
+  <testcase name="shouldReturnNullWrongValueRefuse()" classname="com.ScoreCounterTest" time="0.025"/>
+  <testcase name="shouldReturnNullWrongValueAsk()" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="checkScoreRefuse()" classname="com.ScoreCounterTest" time="0.003"/>
+  <testcase name="changeScoreTest()" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="checkScoreAsk()" classname="com.ScoreCounterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
