@@ -11,11 +11,21 @@ public class TimeQuestionAsk implements Question {
         return question;
     }
 
-    public int getScore(String answer) {
-        if(Objects.equals(answer, "T")) {
+
+    @Override
+    public String toString() {
+        return "TimeQuestionAsk{" +
+                "question='" + question + '\'' +
+                '}';
+    }
+
+    public Integer getScore(String answer) {
+        if (Objects.equals(answer, "T")) {
             return 10;
-        } else {
+        } else if (Objects.equals(answer, "N")) {
             return 0;
+        } else {
+            return null;
         }
     }
 }

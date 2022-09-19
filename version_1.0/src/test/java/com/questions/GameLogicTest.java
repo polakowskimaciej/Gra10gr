@@ -1,12 +1,21 @@
 package com.questions;
 
 import com.GameLogic;
+import com.ScoreCounter;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameLogicTest {
-GameLogic gameLogic = new GameLogic();
+    GameLogic gameLogic = new GameLogic();
+    ScoreCounter scoreCounter = new ScoreCounter();
+
+    @BeforeEach
+    void setGameLogic() {
+        scoreCounter.clearScoresList();
+    }
+
     @Test
     void gameTestAsk() {
         //given - ścieżka ask
@@ -25,6 +34,7 @@ GameLogic gameLogic = new GameLogic();
         //then - wynik się zgadza
         assertEquals(100, gameLogic.getSum());
     }
+
     @Test
     void gameTestRefuse() {
         gameLogic.selectPath("O");
@@ -38,6 +48,12 @@ GameLogic gameLogic = new GameLogic();
         gameLogic.getAnswerToRefuse("N");
         gameLogic.getAnswerToRefuse("T");
         gameLogic.getAnswerToRefuse("N");
-        assertEquals(50,gameLogic.getSum());
+        assertEquals(50, gameLogic.getSum());
+    }
+
+    @Test
+    void shouldReturnNullIfWrongAnswer() {
+        gameLogic.selectPath("P");
+        assertThrows(NullPointerException.class, () -> gameLogic.getAnswerToAsk("xxx"));
     }
 }

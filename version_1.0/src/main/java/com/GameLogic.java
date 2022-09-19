@@ -13,12 +13,26 @@ public class GameLogic {
     //w konstruktorze pytania
     //jak odp na pytania to usówam pyt z listy, lista end i koniec
 
+    public ArrayList<Question> getQuestionsAsk() {
+        return questionsAsk;
+    }
+
+    public ArrayList<Question> getQuestionsRefuse() {
+        return questionsRefuse;
+    }
+
     //wybór ścieżki
     public void selectPath(String path) {
-        if (path.equals("P")) {
-            getAsk();
-        } else {
-            getRefuse();
+        while (true) {
+            if (path.equals("P")) {
+                getAsk();
+                break;
+            } else if (path.equals("O")) {
+                getRefuse();
+                break;
+            } else {
+                System.out.println("Wpisz P lub O");
+            }
         }
     }
 
@@ -45,7 +59,6 @@ public class GameLogic {
         questionsRefuse.add(new KnowlageQuestionRefuse());
         questionsRefuse.add(new TimeQuestionRefuse());
     }
-
     public Question getAsk() {
         return questionsAsk.get(0);
     }
@@ -72,4 +85,6 @@ public class GameLogic {
     public int getSum() {
         return scoreCounter.getSum();
     }
+
+
 }

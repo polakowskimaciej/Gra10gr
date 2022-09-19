@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.questions.GameLogicTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-09-19T09:51:07" hostname="DESKTOP-02V1648" time="0.031">
+  <properties/>
+  <testcase name="gameTestAsk()" classname="com.questions.GameLogicTest" time="0.025"/>
+  <testcase name="shouldReturnNullIfWrongAnswer()" classname="com.questions.GameLogicTest" time="0.003"/>
+  <testcase name="gameTestRefuse()" classname="com.questions.GameLogicTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
