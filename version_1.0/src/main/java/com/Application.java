@@ -23,35 +23,56 @@ public class Application {
         System.out.println("Wpisz P jeśli pytasz lub O jeśli Odmawiasz");
         String path = scanner.nextLine();
         gameLogic.selectPath(path);
-            if (path.equals("P")) {
+        if (path.equals("P")) {
+            if (gameLogic.getQuestionsAsk().size() > 1) {
                 do {
                     String answer = scanner.nextLine();
-                    gameLogic.getAnswerToAsk(answer);
-                    System.out.println(gameLogic.getAsk());
+                    gameLogic.getAnswerToAsk(answer); //odp na pierwsze pytanie
+                    System.out.println(gameLogic.getAsk()); // weź następne pytanie
                 }
-                while (gameLogic.getQuestionsAsk().size() > 0);
-            } else if (path.equals("O")) {
+                while (gameLogic.getQuestionsAsk().size() > 1);
+            }
+            if (gameLogic.getQuestionsAsk().size() == 1) {
+                String answer = scanner.nextLine();
+                gameLogic.getAnswerToAsk(answer);
+            }
+        } else if (path.equals("O")) {
+            if (gameLogic.getQuestionsRefuse().size() > 1) {
                 do {
                     String answer = scanner.nextLine();
                     gameLogic.getAnswerToRefuse(answer);
                     System.out.println(gameLogic.getRefuse());
                 }
-                while (gameLogic.getQuestionsRefuse().size() > 0);
+                while (gameLogic.getQuestionsRefuse().size() > 1);
+            }
+            if (gameLogic.getQuestionsRefuse().size() == 1) {
+                String answer = scanner.nextLine();
+                gameLogic.getAnswerToRefuse(answer);
+            }
         }
-            System.out.println("Otrzymałeś " + scoreCounter.getSum() + "gr");
+        System.out.println("Otrzymałeś " + scoreCounter.getSum() + "gr");
         if (path.equals("P")) {
-            scoreCounter.checkScoreAsk();
+            System.out.println(scoreCounter.checkScoreAsk());
         } else {
-            scoreCounter.checkScoreRefuse();
+            System.out.println(scoreCounter.checkScoreRefuse());
         }
         System.out.println("Czy chcesz poprawić wynik?");
         System.out.println("Wpisz T jeśli Tak");
-        String answerCorrectScore = scanner.nextLine();
+        String answerCorrectScore;
+        answerCorrectScore = scanner.nextLine();
         if (answerCorrectScore.equals("T")) {
             scoreCounter.showAnswers();
             System.out.println("Którą odpowiedź chcesz poprawić? Wpisz numer");
             int answerNumber = scanner.nextInt();
             scoreCounter.correctScore(answerNumber);
+            scoreCounter.showAnswers();
+            System.out.println("Otrzymałeś " + scoreCounter.getSum() + "gr");
+            if (path.equals("P")) {
+                scoreCounter.checkScoreAsk();
+            } else {
+                scoreCounter.checkScoreRefuse();
+            }
+            System.out.println("Powodzenia :-)");
         } else {
             System.out.println("Powodzenia :-)");
         }

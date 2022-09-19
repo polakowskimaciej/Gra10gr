@@ -49,4 +49,5 @@ public class AnswersAsk {
     public String getAnswer10() {
         return answer10;
     }
+
 }
