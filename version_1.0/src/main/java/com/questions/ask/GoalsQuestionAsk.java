@@ -21,6 +21,11 @@ public class GoalsQuestionAsk implements Question {
         }
     }
 
+    //@Override
+    //public String display() {
+        //return question;
+    //}
+
     @Override
     public String toString() {
         return "GoalsQuestionAsk{" +

@@ -10,8 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 class ScoreCounterTest {
     ScoreCounter scoreCounter = new ScoreCounter();
-    AnswersAsk answersAsk = new AnswersAsk();
-    AnswersRefuse answersRefuse = new AnswersRefuse();
+
 
     @BeforeEach
     void setScoreCounter() {
@@ -24,7 +23,7 @@ class ScoreCounterTest {
         scoreCounter.addScoreToList(50);
         //when
         //than
-        assertEquals(answersAsk.getAnswer5(), scoreCounter.checkScoreAsk());
+        assertEquals(AnswersAsk.Answer5.getAnswer(), scoreCounter.checkScoreAsk());
     }
 
     @Test
@@ -42,7 +41,7 @@ class ScoreCounterTest {
     @Test
     void checkScoreRefuse() {
         scoreCounter.addScoreToList(40);
-        assertEquals(answersRefuse.getAnswer4(), scoreCounter.checkScoreRefuse());
+        assertEquals(AnswersRefuse.Answer4.getAnswer(), scoreCounter.checkScoreRefuse());
     }
     @Test
     void changeScoreTest() {

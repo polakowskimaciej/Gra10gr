@@ -56,4 +56,9 @@ class GameLogicTest {
         gameLogic.selectPath("P");
         assertThrows(NullPointerException.class, () -> gameLogic.getAnswerToAsk("xxx"));
     }
+
+    @Test
+    void shouldReturnNullIfWrongAnswerPath() {
+        assertNull(gameLogic.selectPath("X"));
+    }
 }

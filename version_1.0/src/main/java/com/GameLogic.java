@@ -7,8 +7,8 @@ import com.questions.refuse.*;
 import java.util.ArrayList;
 
 public class GameLogic {
-    private ArrayList<Question> questionsAsk = new ArrayList<>();
-    private ArrayList<Question> questionsRefuse = new ArrayList<>();
+    private final ArrayList<Question> questionsAsk = new ArrayList<>();
+    private final ArrayList<Question> questionsRefuse = new ArrayList<>();
     ScoreCounter scoreCounter = new ScoreCounter();
     //w konstruktorze pytania
     //jak odp na pytania to usówam pyt z listy, lista end i koniec
@@ -22,17 +22,13 @@ public class GameLogic {
     }
 
     //wybór ścieżki
-    public void selectPath(String path) {
-        while (true) {
-            if (path.equals("P")) {
-                getAsk();
-                break;
-            } else if (path.equals("O")) {
-                getRefuse();
-                break;
-            } else {
-                System.out.println("Wpisz P lub O");
-            }
+    public Question selectPath(String path) {
+        if (path.equals("P")) {
+            return getAsk();
+        } else if (path.equals("O")) {
+            return getRefuse();
+        } else {
+            return null;
         }
     }
 
@@ -47,7 +43,6 @@ public class GameLogic {
         questionsAsk.add(new ReciprocityQuestionAsk());
         questionsAsk.add(new KnowlageQuestionAsk());
         questionsAsk.add(new TimeQuestionAsk());
-        questionsRefuse.add(new TimeQuestionRefuse());
         questionsRefuse.add(new OpportunityQuestionRefuse());
         questionsRefuse.add(new PrioritiesQuestionRefuse());
         questionsRefuse.add(new SeflRespectQuestionRefuse());

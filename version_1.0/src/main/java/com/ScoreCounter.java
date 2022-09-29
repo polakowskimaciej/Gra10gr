@@ -7,8 +7,6 @@ import java.util.ArrayList;
 
 public class ScoreCounter {
     private static final ArrayList<Integer> scores = new ArrayList();
-    AnswersAsk answersAsk = new AnswersAsk();
-    AnswersRefuse answersRefuse = new AnswersRefuse();
 
     public void addScoreToList(int score) {
         scores.add(score);
@@ -29,50 +27,50 @@ public class ScoreCounter {
 
     public String checkScoreAsk() {
         if (getSum() <= 10) {
-            return answersAsk.getAnswer1();
+            return AnswersAsk.Answer1.getAnswer();
         } else if (getSum() == 20) {
-            return answersAsk.getAnswer2();
+            return AnswersAsk.Answer2.getAnswer();
         } else if (getSum() == 30) {
-            return answersAsk.getAnswer3();
+            return AnswersAsk.Answer3.getAnswer();
         } else if (getSum() == 40) {
-            return answersAsk.getAnswer4();
+            return AnswersAsk.Answer4.getAnswer();
         } else if (getSum() == 50) {
-            return answersAsk.getAnswer5();
+            return AnswersAsk.Answer5.getAnswer();
         } else if (getSum() == 60) {
-            return answersAsk.getAnswer6();
+            return AnswersAsk.Answer6.getAnswer();
         } else if (getSum() == 70) {
-            return answersAsk.getAnswer7();
+            return AnswersAsk.Answer7.getAnswer();
         } else if (getSum() == 80) {
-            return answersAsk.getAnswer8();
+            return AnswersAsk.Answer8.getAnswer();
         } else if (getSum() == 90) {
-            return answersAsk.getAnswer9();
+            return AnswersAsk.Answer9.getAnswer();
         } else if (getSum() == 100) {
-            return answersAsk.getAnswer10();
+            return AnswersAsk.Answer10.getAnswer();
         }
         return null;
     }
 
     public String checkScoreRefuse() {
         if (getSum() <= 10) {
-            return answersRefuse.getAnswer1();
+            return AnswersRefuse.Answer1.getAnswer();
         } else if (getSum() == 20) {
-            return answersRefuse.getAnswer2();
+            return AnswersRefuse.Answer2.getAnswer();
         } else if (getSum() == 30) {
-            return answersRefuse.getAnswer3();
+            return AnswersRefuse.Answer3.getAnswer();
         } else if (getSum() == 40) {
-            return answersRefuse.getAnswer4();
+            return AnswersRefuse.Answer4.getAnswer();
         } else if (getSum() == 50) {
-            return answersRefuse.getAnswer5();
+            return AnswersRefuse.Answer5.getAnswer();
         } else if (getSum() == 60) {
-            return answersRefuse.getAnswer6();
+            return AnswersRefuse.Answer6.getAnswer();
         } else if (getSum() == 70) {
-            return answersRefuse.getAnswer7();
+            return AnswersRefuse.Answer7.getAnswer();
         } else if (getSum() == 80) {
-            return answersRefuse.getAnswer8();
+            return AnswersRefuse.Answer8.getAnswer();
         } else if (getSum() == 90) {
-            return answersRefuse.getAnswer9();
+            return AnswersRefuse.Answer9.getAnswer();
         } else if (getSum() == 100) {
-            return answersRefuse.getAnswer10();
+            return AnswersRefuse.Answer10.getAnswer();
         }
         return null;
     }
