@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.questions.GameLogicTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-19T13:49:29" hostname="DESKTOP-02V1648" time="0.022">
-  <properties/>
-  <testcase name="shouldThrowExceptionIfWrongAnswerPath()" classname="com.questions.GameLogicTest" time="0.022"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

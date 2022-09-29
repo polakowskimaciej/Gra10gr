@@ -6,6 +6,7 @@ Projekt nie powstał w ramach kursu, to własna inicjatywa odpowiadająca na pot
 * [Technologies Used](#technologies-used)
 * [Structure](#structure)
 * [Project Status](#project-status)
+* [To do](#to-do)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 
@@ -17,23 +18,24 @@ Narzędzie jest wykorzystywane jako autoinstrukcja przy decyzji z jakim natęże
 - IDE - InteliJ IDEA Community Edition
 - Junit test framework
 
-
 ## Structure
 
-- Klasa Application zawiera aplikację gry;
-- Klasa GameLogic zawiera logikę gry tzn. wybór ścieżki, tworzy listy pytań, gettery odpowiedzi dodające punkty;
-- Klasa ScoreCounter służy do zbierania i obsługi przekazywanych przez klasy pytań punktów na podstawie przekazanych odpowiedzi i zwracania wyników zależnie od sumy punktów;
-- Pakiet questions zawiera klasy pytań podzielone na dwie ścieżki gry i Interfejs Pytań;
+- Klasa [Application](https://github.com/polakowskimaciej/Gra10gr/blob/main/version_1.0/src/main/java/com/Application.java) zawiera aplikację gry;
+- Klasa [GameLogic](https://github.com/polakowskimaciej/Gra10gr/blob/main/version_1.0/src/main/java/com/GameLogic.java) zawiera logikę gry tzn. wybór ścieżki, tworzy listy pytań, gettery odpowiedzi dodające punkty;
+- Klasa [ScoreCounter](https://github.com/polakowskimaciej/Gra10gr/blob/main/version_1.0/src/main/java/com/ScoreCounter.java) służy do zbierania i obsługi przekazywanych przez klasy pytań punktów na podstawie przekazanych odpowiedzi i zwracania wyników zależnie od sumy punktów;
+- [Pakiet questions](https://github.com/polakowskimaciej/Gra10gr/tree/main/version_1.0/src/main/java/com/questions) zawiera klasy pytań podzielone na dwie ścieżki gry i Interfejs Pytań;
 - W każdej z Klas pytań jest getter przekładający odpowiedź na ilość punktów; 
-- Pakiet answers zawiera Enum'y z z których korzysta ScoreCounter
+- [Pakiet answers](https://github.com/polakowskimaciej/Gra10gr/tree/main/version_1.0/src/main/java/com/answers) zawiera Enum'y z których korzysta ScoreCounter
 - Są dwie [klasy testowe](https://github.com/polakowskimaciej/Gra10gr/tree/main/version_1.0/src/test/java/com), do Game Logic i ScoreCounter
 
 ## Project Status
 Chciałbym w przyszłości zrobić aplikację projektu w przeglądarce i napisać interpretację kolejnych podobnych narzędzi.
 
-## Acknowledgements
-- Dziękuję Szymon Gąsienica-Kotelnicki za wsparcie mentorskie 
+## To do
+Dodać parametryzowane testy do GameLogicTest
 
+## Acknowledgements
+- Dziękuję Szymon Gąsienica-Kotelnicki za wsparcie mentorskie
 
 ## Contact
 Created by [@MaciejPolakowski](https://www.linkedin.com/in/maciejpolakowski92/) 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class GameLogic {
     private final ArrayList<Question> questionsAsk = new ArrayList<>();
     private final ArrayList<Question> questionsRefuse = new ArrayList<>();
-    ScoreCounter scoreCounter = new ScoreCounter();
+    private final ScoreCounter scoreCounter;
     //w konstruktorze pytania
     //jak odp na pytania to usówam pyt z listy, lista end i koniec
 
@@ -32,7 +32,16 @@ public class GameLogic {
         }
     }
 
-    public GameLogic() {
+    public String getAnswerAsk(){
+        return scoreCounter.checkScoreAsk();
+    }
+    public String getAnswerRefuse(){
+        return scoreCounter.checkScoreRefuse();
+    }
+
+    public GameLogic(ScoreCounter scoreCounter) {
+        this.scoreCounter = scoreCounter;
+        scoreCounter.clearScoresList();
         questionsAsk.add(new OpportunityQuestionAsk());
         questionsAsk.add(new PrioritiesQuestionAsk());
         questionsAsk.add(new SeflRespectQuestionAsk());

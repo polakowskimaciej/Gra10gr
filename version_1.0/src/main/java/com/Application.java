@@ -5,16 +5,13 @@ import com.questions.Question;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Application {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         boolean newGame = true;
         while (newGame) {
-            GameLogic gameLogic = new GameLogic();
             ScoreCounter scoreCounter = new ScoreCounter();
-            scoreCounter.clearScoresList();
+            GameLogic gameLogic = new GameLogic(scoreCounter);
             //dialog
             String answerCorrectScore;
             System.out.println("Gra w 10gr to narzędzie pomagające ustalić siłę Prośby lub Odmowy.");
@@ -42,54 +39,35 @@ public class Application {
             if (path.equals("P")) {
                 if (gameLogic.getQuestionsAsk().size() > 1) {
                     do {
-                        try {
-                            String answer = scanner.nextLine();
-                            gameLogic.getAnswerToAsk(answer); //odp na pierwsze pytanie
-                        } catch (Exception exception) {
-                            System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
-                        }
+                        handleGetAnswerToAsk(scanner, gameLogic);
                         System.out.println(gameLogic.getAsk()); // weź następne pytanie
                     }
                     while (gameLogic.getQuestionsAsk().size() > 1);
                 }
                 //Ostatnie pytanie
                 if (gameLogic.getQuestionsAsk().size() == 1) {
-                    try {
-                        String answer = scanner.nextLine();
-                        gameLogic.getAnswerToAsk(answer);
-                    } catch (Exception exception) {
-                        System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
-                    }
+                    handleGetAnswerToAsk(scanner, gameLogic);
                 }
                 //ścieżka odpowiedzi
             } else if (path.equals("O")) {
                 if (gameLogic.getQuestionsRefuse().size() > 1) {
                     do {
-                        try {
-                            String answer = scanner.nextLine();
-                            gameLogic.getAnswerToRefuse(answer);
-                        } catch (Exception exception) {
-                            System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
-                        }
+                        //extract method
+                        handleGetAnswerToRefuse(scanner, gameLogic);
                         System.out.println(gameLogic.getRefuse());
                     }
                     while (gameLogic.getQuestionsRefuse().size() > 1);
                 }
                 if (gameLogic.getQuestionsRefuse().size() == 1) {
-                    try {
-                        String answer = scanner.nextLine();
-                        gameLogic.getAnswerToRefuse(answer);
-                    } catch (Exception exception) {
-                        System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
-                    }
+                    handleGetAnswerToRefuse(scanner, gameLogic);
                 }
             }
             System.out.println("/-----------------------------------------/");
             System.out.println("Otrzymałeś " + scoreCounter.getSum() + "gr");
             if (path.equals("P")) {
-                System.out.println(scoreCounter.checkScoreAsk());
+                System.out.println(gameLogic.getAnswerAsk());
             } else {
-                System.out.println(scoreCounter.checkScoreRefuse());
+                System.out.println(gameLogic.getAnswerRefuse());
             }
             System.out.println("/-----------------------------------------/");
             System.out.println("Skonsultuj wynik z zaufaną osobą.");
@@ -107,6 +85,24 @@ public class Application {
         }
         System.out.println("Powodzenia");
 
+    }
+
+    private static void handleGetAnswerToRefuse(Scanner scanner, GameLogic gameLogic) {
+        try {
+            String answer = scanner.nextLine();
+            gameLogic.getAnswerToRefuse(answer);
+        } catch (Exception exception) {
+            System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
+        }
+    }
+
+    private static void handleGetAnswerToAsk(Scanner scanner, GameLogic gameLogic) {
+        try {
+            String answer = scanner.nextLine();
+            gameLogic.getAnswerToAsk(answer); //odp na pierwsze pytanie
+        } catch (Exception exception) {
+            System.out.println("Zła odpowiedź, spróbuj ponownie. Wpisz T lub N.");
+        }
     }
 
 
