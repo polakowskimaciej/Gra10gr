@@ -26,7 +26,7 @@ Narzędzie jest wykorzystywane jako autoinstrukcja przy decyzji z jakim natęże
 - Pakiet questions zawiera klasy pytań podzielone na dwie ścieżki gry i Interfejs Pytań;
 - W każdej z Klas pytań jest getter przekładający odpowiedź na ilość punktów; 
 - Pakiet answers zawiera Enum'y z z których korzysta ScoreCounter
-- Są dwie klasy testowe, do Game Logic i ScoreCounter
+- Są dwie [klasy testowe](https://github.com/polakowskimaciej/Gra10gr/tree/main/version_1.0/src/test/java/com), do Game Logic i ScoreCounter
 
 ## Project Status
 Chciałbym w przyszłości zrobić aplikację projektu w przeglądarce i napisać interpretację kolejnych podobnych narzędzi.
