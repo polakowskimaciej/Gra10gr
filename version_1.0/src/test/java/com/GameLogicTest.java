@@ -1,4 +1,4 @@
-package com.questions;
+package com;
 
 import com.GameLogic;
 import com.ScoreCounter;

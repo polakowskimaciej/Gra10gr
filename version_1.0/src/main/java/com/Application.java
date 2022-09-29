@@ -5,7 +5,7 @@ import com.questions.Question;
 import java.util.List;
 import java.util.Scanner;
 
-//w CV podać link, gdzie zrobiłem gra -> readme, opisać w redme gdzie co jest, TO NIE JEST w ramach kursu, wszystie info; Co, jak, gdzie, dlaczego - markdown - dać linki główna klasa -/ wchodzę na gita i dostaję radme i to ma opisać o czym jest projekt.
+
 public class Application {
     public static void main(String[] args) {
 
