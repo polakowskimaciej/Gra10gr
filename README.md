@@ -33,6 +33,8 @@ Chciałbym w przyszłości zrobić aplikację projektu w przeglądarce i napisa�
 
 ## To do
 Dodać parametryzowane testy do GameLogicTest
+Spring Boot CRUD Application with Thymeleaf
+Testy Selenium
 
 ## Acknowledgements
 - Dziękuję Szymon Gąsienica-Kotelnicki za wsparcie mentorskie
