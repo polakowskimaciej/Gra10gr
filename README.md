@@ -32,9 +32,9 @@ Narzędzie jest wykorzystywane jako autoinstrukcja przy decyzji z jakim natęże
 Chciałbym w przyszłości zrobić aplikację projektu w przeglądarce i napisać interpretację kolejnych podobnych narzędzi.
 
 ## To do
-Dodać parametryzowane testy do GameLogicTest
-Spring Boot CRUD Application with Thymeleaf
-Testy Selenium
+- Dodać parametryzowane testy do GameLogicTest
+- Spring Boot CRUD Application with Thymeleaf
+- Testy Selenium
 
 ## Acknowledgements
 - Dziękuję Szymon Gąsienica-Kotelnicki za wsparcie mentorskie
