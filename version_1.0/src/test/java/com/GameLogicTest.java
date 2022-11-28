@@ -96,4 +96,5 @@ class GameLogicTest {
     void shouldReturnNullIfWrongAnswerPath() {
         assertNull(gameLogic.selectPath("X"));
     }
+
 }

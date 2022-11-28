@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ScoreCounterTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2022-11-28T15:30:42" hostname="DESKTOP-02V1648" time="0.175">
+  <properties/>
+  <testcase name="shouldReturnNullWrongValueRefuse()" classname="com.ScoreCounterTest" time="0.026"/>
+  <testcase name="shouldReturnNullWrongValueAsk()" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[1] 0, ZrĂłb to, czego chce druga osoba, bez proszenia" classname="com.ScoreCounterTest" time="0.03"/>
+  <testcase name="[2] 10, ZrĂłb to, czego chce druga osoba, bez proszenia" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[3] 20, Nie narzekaj, zrĂłb to ochoczo" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="[4] 30, ZrĂłb to pomimo braku ochoty" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="[5] 40, ZrĂłb to, ale okazuj niechÄ™Ä‡" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[6] 50, Powiedz, ĹĽe raczej nie, ale w sposĂłb uprzejmy" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[7] 60, OdmĂłw pewnie, ale z moĹĽliwoĹ›ciÄ… ponownego rozpatrzenia proĹ›by" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[8] 70, OdmĂłw pewnie, sprzeciwiaj siÄ™ przed powiedzeniem 'tak'" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="[9] 80, Zdecydowanie odmĂłw sprzeciwiaj siÄ™ przed powiedzeniem 'tak'" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[10] 90, Zdecydowanie, opieraj siÄ™, negocjuj" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[11] 100, Nie rĂłb tego" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="changeScoreTest()" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[1] 0, Nie proĹ›, nie sugeruj" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="[2] 10, Nie proĹ›, nie sugeruj" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[3] 20, PoĹ›rednio sugeruj, akceptuj odmowÄ™" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[4] 30, Otwarcie sugeruj, akceptuj odmowÄ™" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[5] 40, NieĹ›miaĹ‚o proĹ›, akceptuj odmowÄ™" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[6] 50, Uprzejmie proĹ›, ale akceptuj odmowÄ™" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[7] 60, Pewnie proĹ›, akceptuj odmowÄ™" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[8] 70, Pewnie proĹ›, sprzeciwiaj siÄ™ odmowie" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[9] 80, Stanowczo proĹ›, sprzeciwiaj siÄ™ odmowie" classname="com.ScoreCounterTest" time="0.002"/>
+  <testcase name="[10] 90, Stanowczo proĹ›, nalegaj, negocjuj, ponawiaj proĹ›by" classname="com.ScoreCounterTest" time="0.001"/>
+  <testcase name="[11] 100, ProĹ› i nie akceptuj odmowy" classname="com.ScoreCounterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
